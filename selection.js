@@ -1,4 +1,7 @@
 const SeleksiNilai = (nilaiAwal, nilaiAkhir, [...data]) => {
+  if (typeof nilaiAwal !== "number") return "Nilai awal harus berupa number!";
+  if (typeof nilaiAkhir !== "number") return "Nilai akhir harus berupa number!";
+  if (typeof data !== "object") return "Nilai data harus berupa array!!";
   if (nilaiAwal >= nilaiAkhir)
     return "Nilai akhir harus lebih besar dari nilai awal";
   if (data.length <= 4) return "Jumlah data dalam dataArray harus lebih dari 5";
