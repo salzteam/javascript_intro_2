@@ -32,10 +32,7 @@ function searchName(input, limits, transformationFunction) {
 }
 
 const callback = (list, restArr) => {
-  if (
-    list.toLowerCase().indexOf(input) > -1 ||
-    list.toUpperCase().indexOf(input) > -1
-  ) {
+  if (list.toLowerCase().indexOf(input.toLowerCase()) > -1) {
     restArr.push(list);
     return;
   }
