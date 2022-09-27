@@ -27,8 +27,7 @@ function searchName(input, limits, transformationFunction) {
     // console.log(resultSearch);
     // console.log(typeof resultSearch);
   }
-  resultSearch.pop();
-  return resultSearch;
+  if (resultSearch.length >= 0) return resultSearch.slice(0, limits);
 }
 
 const callback = (list, restArr) => {
