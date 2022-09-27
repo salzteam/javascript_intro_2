@@ -1,5 +1,5 @@
 function searchName(input, limits, transformationFunction) {
-  if (typeof input !== "string") return "Invalid, Name must be string!";
+  if (!input || typeof input !== "string") return "Invalid input name!";
   if (typeof limits !== "number")
     return "Invalid, Limit output must be number!";
   if (typeof transformationFunction !== "function") return "Invalid Function!";
